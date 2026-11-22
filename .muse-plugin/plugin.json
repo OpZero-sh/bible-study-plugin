@@ -11,12 +11,20 @@
   "capabilities": {
     "skills": [
       {
+        "id": "export-or-delete-journal",
+        "path": "skills/export-or-delete-journal/SKILL.md"
+      },
+      {
         "id": "keep-a-journal",
         "path": "skills/keep-a-journal/SKILL.md"
       },
       {
         "id": "study-a-passage",
         "path": "skills/study-a-passage/SKILL.md"
+      },
+      {
+        "id": "word-study",
+        "path": "skills/word-study/SKILL.md"
       }
     ],
     "mcpServers": [
