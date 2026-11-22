@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "bible-study-lexicon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Explore a biblical Greek or Hebrew word by spelling, English gloss or Strong’s number.",
   "author": {
     "name": "OpZero",

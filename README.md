@@ -41,15 +41,13 @@ Each skill folder has a reference file with the data sources, limits and error m
 
 `passage-researcher` is a read only researcher for questions that need several lookups. It can use the Scripture and dictionary tools only. It cannot read or change your journal. It returns exact quotations with citations, translation differences, dictionary entries and a list of what it could not confirm.
 
-### Hooks
+### Hook
 
-The hooks run in Claude Code. Each one is a short shell script in the plugin’s hooks folder that prints a fixed message. None of them reads the tool payload, writes to disk or uses the network.
+The hook runs in Claude Code. It is a short shell script in the plugin’s hooks folder that prints a fixed message. It never reads the tool payload, writes to disk or uses the network. It adds to what Claude tells you and never interrupts a tool call.
 
 | When | Script | What it does |
 | --- | --- | --- |
-| Before Bible Journal creates a share link | `hooks/confirm-share.sh` | Asks you to confirm, because the link makes one journal item readable by anyone who has it. |
 | After a share link is created | `hooks/share-receipt.sh` | Reminds Claude to give you the exact link, to say who can read it, and to leave the note text out of the reply unless you ask. |
-| Before Bible Journal deletes the whole journal | `hooks/confirm-delete-all.sh` | Asks you to confirm, because the deletion is permanent. |
 
 ## What the plugin connects to and runs
 

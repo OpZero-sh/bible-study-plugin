@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "bible-study-journal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Keep a private record of personal highlights, cross-references and notes beside the Bible text.",
   "author": {
     "name": "OpZero",
