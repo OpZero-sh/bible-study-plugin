@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "mcpServers": {
+    "bible-journal": {
+      "type": "streamable-http",
+      "url": "https://bible-journal.mcp.opzero.sh/mcp"
+    }
+  }
+}

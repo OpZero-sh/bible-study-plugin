@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "bible-study-journal",
+  "version": "1.0.0",
+  "description": "Keep a private record of personal highlights, cross-references and notes beside the Bible text.",
+  "author": {
+    "name": "OpZero",
+    "url": "https://opzero.sh"
+  },
+  "homepage": "https://bible-journal.mcp.opzero.sh/",
+  "repository": "https://github.com/OpZero-sh/bible-study-plugin",
+  "license": "LicenseRef-OpZero-Plugin",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Bible Journal",
+        "shortDescription": "Annotate a passage",
+        "longDescription": "Keep a private record of personal highlights, cross-references and notes beside the Bible text.",
+        "developerName": "OpZero",
+        "category": "Productivity",
+        "websiteURL": "https://bible-journal.mcp.opzero.sh/",
+        "privacyPolicyURL": "https://bible-journal.mcp.opzero.sh/?page=privacy",
+        "supportURL": "https://bible-journal.mcp.opzero.sh/?page=support",
+        "termsOfServiceURL": "https://opzero.sh/terms",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png"
+      }
+    }
+  }
+}

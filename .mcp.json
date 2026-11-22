@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "scripture": {
+      "type": "http",
+      "url": "https://scripture-mcp.mcp.opzero.sh/mcp"
+    },
+    "lexicon": {
+      "type": "http",
+      "url": "https://greek-hebrew-word-study.mcp.opzero.sh/mcp"
+    },
+    "journal": {
+      "type": "http",
+      "url": "https://bible-journal.mcp.opzero.sh/mcp"
+    }
+  }
+}

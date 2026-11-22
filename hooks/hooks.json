@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "^mcp__plugin_bible-study_journal__create_share_link$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/share-receipt.sh\""
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "name": "bible-study",
+  "version": "1.0.0",
+  "displayName": "Bible Study",
+  "description": "Read a passage in the Berean Standard Bible or King James Version, explore a Greek or Hebrew word, and keep your own notes beside the text.",
+  "compat": {
+    "source": "native",
+    "manifestDir": ".muse-plugin"
+  },
+  "capabilities": {
+    "skills": [
+      {
+        "id": "keep-a-journal",
+        "path": "skills/keep-a-journal/SKILL.md"
+      },
+      {
+        "id": "study-a-passage",
+        "path": "skills/study-a-passage/SKILL.md"
+      }
+    ],
+    "mcpServers": [
+      {
+        "id": "scripture",
+        "transport": "http",
+        "url": "https://scripture-mcp.mcp.opzero.sh/mcp"
+      },
+      {
+        "id": "lexicon",
+        "transport": "http",
+        "url": "https://greek-hebrew-word-study.mcp.opzero.sh/mcp"
+      }
+    ]
+  }
+}

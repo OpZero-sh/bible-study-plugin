@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "scripture": {
+      "type": "streamable-http",
+      "url": "https://scripture-mcp.mcp.opzero.sh/mcp"
+    },
+    "lexicon": {
+      "type": "streamable-http",
+      "url": "https://greek-hebrew-word-study.mcp.opzero.sh/mcp"
+    },
+    "journal": {
+      "type": "streamable-http",
+      "url": "https://bible-journal.mcp.opzero.sh/mcp"
+    }
+  }
+}

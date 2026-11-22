@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "bible-study-lexicon",
+  "version": "1.0.0",
+  "description": "Explore a biblical Greek or Hebrew word by spelling, English gloss or Strong’s number.",
+  "author": {
+    "name": "OpZero",
+    "url": "https://opzero.sh"
+  },
+  "homepage": "https://greek-hebrew-word-study.mcp.opzero.sh/",
+  "repository": "https://github.com/OpZero-sh/bible-study-plugin",
+  "license": "LicenseRef-OpZero-Plugin",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Greek & Hebrew Word Study",
+        "shortDescription": "Look up a biblical word",
+        "longDescription": "Explore a biblical Greek or Hebrew word by spelling, English gloss or Strong’s number.",
+        "developerName": "OpZero",
+        "category": "Productivity",
+        "websiteURL": "https://greek-hebrew-word-study.mcp.opzero.sh/",
+        "privacyPolicyURL": "https://greek-hebrew-word-study.mcp.opzero.sh/?page=privacy",
+        "supportURL": "https://greek-hebrew-word-study.mcp.opzero.sh/?page=support",
+        "termsOfServiceURL": "https://opzero.sh/terms",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png"
+      }
+    }
+  }
+}

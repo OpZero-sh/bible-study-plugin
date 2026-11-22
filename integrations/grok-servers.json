@@ -1,0 +1,27 @@
+{
+  "scripture": {
+    "url": "https://scripture-mcp.mcp.opzero.sh/mcp",
+    "allowed_tools": [
+      "get_passage",
+      "compare_translations",
+      "search_verses",
+      "list_translations"
+    ]
+  },
+  "lexicon": {
+    "url": "https://greek-hebrew-word-study.mcp.opzero.sh/mcp",
+    "allowed_tools": [
+      "get_strongs_entry",
+      "search_by_meaning",
+      "search_original_word"
+    ]
+  },
+  "journal": {
+    "url": "https://bible-journal.mcp.opzero.sh/mcp",
+    "allowed_tools": [
+      "open_reader",
+      "list_journal"
+    ],
+    "token_env": "BIBLE_JOURNAL_ACCESS_TOKEN"
+  }
+}
