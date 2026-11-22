@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "name": "bible-study",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Bible Study",
   "description": "Read a passage in the Berean Standard Bible or King James Version, explore a Greek or Hebrew word, and keep your own notes beside the text.",
   "compat": {

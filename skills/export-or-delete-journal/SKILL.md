@@ -47,7 +47,7 @@ What the export holds and what deletion removes are described in [references/dat
 1. Say exactly what will be removed: every highlight, note, link and share link in the journal, at once and for good.
 2. Offer an export first. If the person accepts, run the export and hand it over before going on.
 3. Ask for explicit confirmation in the person's own words. A general remark such as "clean things up" is not confirmation.
-4. Only then call `delete_journal` with `confirm: "DELETE"`. In Claude Code the plugin also asks for confirmation before this call.
+4. Only then call `delete_journal` with `confirm: "DELETE"`.
 5. Report the result as the server returned it.
 
 ## Decision points
