@@ -55,8 +55,8 @@ Limits, error messages and how share links behave are in [references/journal-ent
 **Share.**
 1. Confirm which single item is to be shared. Get its id from `list_journal` or from the result that created it.
 2. Tell the person the link will be public: anyone who has it can read that item and its passage until it is revoked.
-3. Call `create_share_link` with the id. In Claude Code the plugin asks for confirmation before this call.
-4. Give the exact link returned. Do not repeat the note text beside it unless asked.
+3. Ask the person to confirm. Only then call `create_share_link` with the id.
+4. Give the exact link returned and say that anyone who has it can read the item. Do not repeat the note text beside it unless asked.
 
 **Stop sharing.** Call `revoke_share_link` with the link, the token or the item id. The note itself stays in the journal.
 
