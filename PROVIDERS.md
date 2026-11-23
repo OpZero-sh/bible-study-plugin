@@ -8,7 +8,7 @@ Read a passage in the Berean Standard Bible or King James Version, explore a Gre
 
 [Scripture Lookup](https://raw.githubusercontent.com/OpZero-sh/bible-study-plugin/downloads/bible-study--scripture.zip) · [Greek & Hebrew Word Study](https://raw.githubusercontent.com/OpZero-sh/bible-study-plugin/downloads/bible-study--lexicon.zip) · [Bible Journal](https://raw.githubusercontent.com/OpZero-sh/bible-study-plugin/downloads/bible-study--journal.zip)
 
-For a publisher or developer setup, open the OpenAI developer dashboard, choose **Upload plugin**, upload the one-connection ZIP and connect the declared MCP endpoint. People with an existing directory listing can install it directly in ChatGPT. For an OAuth-protected service select OAuth and complete its browser sign-in. Choose no authentication for a public service. Rebuild the archives from a checkout with `python3 scripts/build_openai.py ../plugin-zips`.
+For a publisher or developer setup, open the OpenAI developer dashboard, choose **Upload plugin**, upload the one-connection ZIP and connect the declared MCP endpoint. People with an existing directory listing can install it directly in ChatGPT. For an OAuth-protected service select OAuth and complete its browser sign-in. Choose no authentication for a public service. The builder is not in this repository. To rebuild the archives, clone [OpZero-sh/plugins](https://github.com/OpZero-sh/plugins) beside this checkout and run `python3 ../plugins/tools/build_openai.py dist` from this checkout.
 
 [OpenAI package guide](https://developers.openai.com/plugins/build/plugins) · [Upload and connection setup](https://developers.openai.com/plugins/deploy/submission)
 
@@ -22,10 +22,10 @@ From a checkout of this repository, run `grok plugin validate .` and `grok plugi
 
 ## Grok API
 
-Preview a request locally with Python 3. Add `XAI_API_KEY` in your environment and omit `--dry-run` to send it. Use `--model` to select a model enabled for your account. The example requests a focused set of product tools; its tool list is in [grok-servers.json](integrations/grok-servers.json).
+Preview a request locally with Python 3. The example script is not in this repository. Clone [OpZero-sh/plugins](https://github.com/OpZero-sh/plugins) beside this checkout and run the command below from this checkout. Add `XAI_API_KEY` in your environment and omit `--dry-run` to send it. Use `--model` to select a model enabled for your account. The example requests a focused set of product tools; its tool list is in [grok-servers.json](integrations/grok-servers.json).
 
 ```sh
-python3 integrations/grok_example.py --dry-run 'Compare Psalm 23:4 in the BSB and KJV. Which words account for the difference?'
+python3 ../plugins/tools/grok_example.py --dry-run 'Compare Psalm 23:4 in the BSB and KJV. Which words account for the difference?'
 ```
 
 For authenticated connections, obtain a current end-user OAuth access token for each named OpZero service in your application’s sign-in flow. Supply the unprefixed token in `BIBLE_JOURNAL_ACCESS_TOKEN`. Your application manages consent, refresh and storage. The example attaches each token only to its own MCP server.

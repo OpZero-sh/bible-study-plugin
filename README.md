@@ -43,13 +43,7 @@ Each skill folder has a reference file with the data sources, limits and error m
 
 ### Hooks
 
-The hooks run in Claude Code. Each one is a short shell script in the plugin’s hooks folder that prints a fixed message. None of them reads the tool payload, writes to disk or uses the network.
-
-| When | Script | What it does |
-| --- | --- | --- |
-| Before Bible Journal creates a share link | `hooks/confirm-share.sh` | Asks you to confirm, because the link makes one journal item readable by anyone who has it. |
-| After a share link is created | `hooks/share-receipt.sh` | Reminds Claude to give you the exact link, to say who can read it, and to leave the note text out of the reply unless you ask. |
-| Before Bible Journal deletes the whole journal | `hooks/confirm-delete-all.sh` | Asks you to confirm, because the deletion is permanent. |
+None. This plugin has no hooks and runs no code on your machine. The `keep-a-journal` skill tells Claude to confirm which item you want shared, to say that the link is public and to ask before it creates a share link, then to give you the exact link and leave the note text out of the reply unless you ask. The `export-or-delete-journal` skill tells Claude to ask for your explicit confirmation before it deletes the whole journal, because the deletion is permanent.
 
 ## What the plugin connects to and runs
 
@@ -63,10 +57,10 @@ The plugin talks to three remote MCP servers run by OpZero. It contacts no other
 
 The two public services state that they do not store requests. Bible Journal stores what you save under your account until you delete it, and remembers the last chapter you opened for up to 90 days so the reader can reopen it. Nothing in the journal is public unless you create a share link for one item, and you can revoke that link later. Each service publishes its own privacy policy on its host.
 
-The repository also holds files for other assistants. Claude does not run them, and nothing in the plugin calls them.
+The repository also holds settings files for other assistants. Claude does not run them, and nothing in the plugin calls them. The two helper scripts that use them are not in this repository. They live in the catalog repository, https://github.com/OpZero-sh/plugins, and do something only if you clone it and run them yourself.
 
-- `scripts/build_openai.py` builds ZIP packages for ChatGPT and Codex from this repository. It reads local files and writes ZIP files to the folder you name. It uses no network.
-- `integrations/grok_example.py` is an optional example for the xAI API. It reads `XAI_API_KEY` from your environment, and for the journal connection an access token from `BIBLE_JOURNAL_ACCESS_TOKEN`, and sends one request to `api.x.ai` only when you run it yourself without the dry run flag. With the dry run flag it prints the request and sends nothing.
+- `tools/build_openai.py` in the catalog builds ZIP packages for ChatGPT and Codex from a checkout of this repository. It reads local files and writes ZIP files to the folder you name. It uses no network.
+- `tools/grok_example.py` in the catalog is an optional example for the xAI API. It reads the server list in `integrations/grok-servers.json`. It reads `XAI_API_KEY` from your environment, and for the journal connection an access token from `BIBLE_JOURNAL_ACCESS_TOKEN`, and sends one request to `api.x.ai` only when you run it yourself without the dry run flag. With the dry run flag it prints the request and sends nothing.
 - The JSON files under `integrations/` are settings for those assistants. They list the same three hosts.
 
 ## Sources and limits
